@@ -1,0 +1,87 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height: 90svh;
+    align-items: center;
+    background: snow;
+}
+
+
+.cardContainer {
+    height: 80vh;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80vw;
+    background: white;
+    box-shadow: 10px 10px 15px rgba(9, 8, 8, 0.1);
+}
+
+.cardContainer__left {
+    flex: 0.6;
+    padding: 2rem;
+    text-align: center;
+}
+
+    .cardleft_heading {
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    .inputField {
+        padding-inline: 1.3rem;
+        padding-block: 0.8rem;
+        outline: none;
+        border-radius: 10px;
+        border: 1px solid lightgray;
+        width: 100%;
+    }
+
+    .inputContainers {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1.3rem;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 1.5rem;
+    }
+
+    .inputRow {
+        width: fit-content;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .buttonWithOutline {
+        background-color: rgb(244, 240, 240);
+        border-radius: 10px;
+        padding-inline: 1.2rem;
+        padding-block: 0.6rem;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .cardContainer__left .buttonWithOutline:hover {
+        background-color: #2170c0;
+        color: white;
+    }
+
+.cardContainer__right {
+    flex: 0.4;
+    background-color: #2170c0; 
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-inline: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .cardContainer {
+        flex-direction: column;
+    }
+}

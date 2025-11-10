@@ -1,0 +1,53 @@
+POST http://localhost:9000/register HTTP/1.1
+content-Type: application/json
+
+{
+    "username": "sanvi",
+    "password": "sanvi@123",
+    "email": "sanvi@gmail.com",
+    "name": "sanvi"
+} 
+
+###
+
+POST http://localhost:9000/login HTTP/1.1
+content-Type: application/json
+
+{
+    "email": "sanvi@gmail.com",
+    "password": "sanvi@123"
+}
+
+###
+
+GET http://localhost:9000/get_user_and_profile/?token=1d7412eec5a395ab527ed9db36bdeb61bc34222353ff12865788fc66112c382c 
+Content-Type: application/json
+
+###
+
+POST http://localhost:9000/update_profile_data
+Content-Type: application/json
+
+{
+    "token": "d41162f28bb70531edcf434c6f8a5e21b8be7e4a32b1862a2f7aec7ab9da1891",
+    "bio": "Hello, I'm Neha, a software developer with a passion for creating innovative solutions.",
+    "currentPost" : "Software Developer at TechCorp",
+    "pastWork": [
+        {
+            "company": "Microsoft",
+            "position": "SDE 1",
+            "years": "2+"
+        }
+    ],
+    "education": [
+        {
+            "school": "IIIT",
+            "degree": "B.E",
+            "fieldOfStudy": "Information Technology"
+        }
+    ]
+}
+
+###
+
+GET http://localhost:9000/user/get_all_users
